@@ -21,7 +21,7 @@
 >
 >    ```js
 >    var cookieParser = require('cookie-parser')
->    
+>       
 >    // load the cookie-parsing middleware
 >    app.use(cookieParser())
 >    ```
@@ -35,7 +35,6 @@
 ## 关于应用的
 
 - body-parser
-- multer:处理文件上传
 - cookie-parser
 - cookie-session
 - morgan 、 winston 、 express-winston 日志记录
@@ -43,3 +42,5 @@
 - config-lite 读取配置文件
 - mkdirp 递归创建文件目录
 - ejs 文件模板 
+- formidable 用来上传文件的
+- multer 上传文件

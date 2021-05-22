@@ -44,3 +44,6 @@
 - ejs 文件模板 
 - formidable 用来上传文件的
 - multer 上传文件
+- serve-index 用来展示文件夹中的文件的
+- @godaddy/terminus 可以监听强制性关闭应用时，触发设定的操作
+- http-terminator 自动关闭当前应用

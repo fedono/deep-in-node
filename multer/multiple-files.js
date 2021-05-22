@@ -4,13 +4,14 @@ const fs = require('fs');
 const multer = require('multer');
 
 let dirPath = path.resolve(__dirname, 'uploads/')
-fs.mkdirSync(dirPath);
-// multer.distStorage 居然不会自动创建 uploads 文件夹，居然还要手动创建
+if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath);
+}
+
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, dirPath)
     },
-    // 自定义上传的文件名称
     filename: function (req, file, cb) {
         cb(null, file.originalname + '-' + Date.now())
     }
@@ -24,15 +25,18 @@ app.get('/', (req, res) => {
         <h2>With <code>"express"</code> npm package</h2>
         <form action="profile" enctype="multipart/form-data" method="post">
             <div>Text field title: <input type="text" name="title" /></div>
-            <div>File: <input type="file" name="avatar" /></div>
+            <div>File: <input type="file" name="avatar" multiple="multiple" /></div>
             <input type="submit" value="Upload" />
         </form>
     `)
 });
 
-app.post('/profile', upload.single('avatar'), function (req, res, next) {
+// 这里的 upload.array 中的第一个参数，一定要和上传文件的字段对应
+app.post('/profile', upload.array('avatar', 3), function (req, res, next) {
+    // 因为上传的文件都会通过 multer 修改固定的文件名的规则，
+    // 可以在这里使用 fs.renameSync(oldPath, newPath) 来修改文件
     res.json({
-        file: req.file
+        file: req.files
     })
 })
 

@@ -21,7 +21,7 @@
 >
 >    ```js
 >    var cookieParser = require('cookie-parser')
->       
+>          
 >    // load the cookie-parsing middleware
 >    app.use(cookieParser())
 >    ```
@@ -47,3 +47,5 @@
 - serve-index 用来展示文件夹中的文件的
 - @godaddy/terminus 可以监听强制性关闭应用时，触发设定的操作
 - http-terminator 自动关闭当前应用
+- detect-port 用来检测端口是否可用
+  - 日常开发启用端口，可能会出现被占用的情况，这时候就可以检测后，再启用另外一个端口了

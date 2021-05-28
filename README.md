@@ -35,17 +35,66 @@
 ## 关于应用的
 
 - body-parser
+
 - cookie-parser
+
 - cookie-session
+
 - morgan 、 winston 、 express-winston 日志记录
+
 - request-validate 参数验证
+
 - config-lite 读取配置文件
+
 - mkdirp 递归创建文件目录
+
 - ejs 文件模板 
+
 - formidable 用来上传文件的
+
 - multer 上传文件
+
 - serve-index 用来展示文件夹中的文件的
+
 - @godaddy/terminus 可以监听强制性关闭应用时，触发设定的操作
+
 - http-terminator 自动关闭当前应用
+
 - detect-port 用来检测端口是否可用
+
   - 日常开发启用端口，可能会出现被占用的情况，这时候就可以检测后，再启用另外一个端口了
+
+- Node-config 
+
+  - 这个比 config 好用，可以根据环境自动切换 JSON 配置文件 
+
+- easy-json-schema 将 json 数据转换成 json-schema 的数据格式 
+
+- formstream 在 node 中使用 form 的格式来添加数据
+
+- pump 更好的 stream pipe 的工具
+
+  > When using standard `source.pipe(dest)` source will *not* be destroyed if dest emits close or an error. You are also not able to provide a callback to tell when then pipe has finished.
+
+- parameter 参数验证
+
+- cluster-client
+
+  > Sharing Connection among Multi-Process Nodejs
+
+- agentkeepalive 设置 keep alive 的时长
+
+- logfilestream 通过 stream 的方式，天添加 log 文件，可以自定义文件命名
+
+- [enums](https://github.com/node-modules/enums) JS 实现的 Enum 
+
+- nldr 一个可以遍历文件、复制文件、按行读取文件、创建文件夹的库
+
+- watch-file 用来监控文件是否变化
+
+- [is-type-of](https://github.com/node-modules/is-type-of) 用来检测所有的数据类型
+
+- time-profile 计算函数执行的时间 
+
+- webcamera 网页截图
+

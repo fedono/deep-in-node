@@ -33,15 +33,20 @@
     - 如打开 build 文件为服务器文件，则使用 server -s build 
 
 ## 关于应用的
+> 可以在 [snyk](https://snyk.io/advisor/npm-package/express-actuator) 找到相似的 npm 包
 
 - body-parser
 
 - cookie-parser
 
 - cookie-session
+<<<<<<< HEAD
 
 - morgan 、 winston 、 express-winston 日志记录
 
+=======
+- morgan 、 winston 、 express-winston 、log4js日志记录
+>>>>>>> add
 - request-validate 参数验证
 
 - config-lite 读取配置文件
@@ -57,6 +62,7 @@
 - serve-index 用来展示文件夹中的文件的
 
 - @godaddy/terminus 可以监听强制性关闭应用时，触发设定的操作
+<<<<<<< HEAD
 
 - http-terminator 自动关闭当前应用
 
@@ -98,3 +104,7 @@
 
 - webcamera 网页截图
 
+=======
+- http-terminator 自动关闭当前应用
+- express-session 关于登录登出
+>>>>>>> add
